@@ -4,6 +4,7 @@
   "description": "Repositório do curso API REST em Node JS aplicando testes.",
   "main": "index.js",
   "dependencies": {
+    "express": "4.16.4",
     "firacode": "^6.2.0"
   },
   "devDependencies": {
@@ -13,7 +14,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "globals": "^15.0.0",
-    "jest": "23.6.0"
+    "jest": "23.6.0",
+    "supertest": "3.3.0"
   },
   "scripts": {
     "test": "jest",
