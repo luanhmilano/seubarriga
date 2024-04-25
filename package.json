@@ -1,0 +1,31 @@
+{
+  "name": "seubarriga",
+  "version": "1.0.0",
+  "description": "Repositório do curso API REST em Node JS aplicando testes.",
+  "main": "index.js",
+  "dependencies": {
+    "firacode": "^6.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/eslint src/** test/** --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanhmilano/seubarriga.git"
+  },
+  "author": "Luan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luanhmilano/seubarriga/issues"
+  },
+  "homepage": "https://github.com/luanhmilano/seubarriga#readme"
+}
