@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.use(express.json())
+const consign = require('consign')
+
+consign({ cwd: 'src', verbose: false }).include('./config/middlewares.js').into(app)
 
 app.get('/', (req, res) => {
   res.status(200).send()
