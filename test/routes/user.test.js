@@ -1,7 +1,8 @@
 const request = require('supertest')
 
 const app = require('../../src/app')
-const { password } = require('pg/lib/defaults')
+
+const email = `${Date.now()}@gmail.com`
 
 test('Deve listar todos os usuários', async () => {
   const res = await request(app).get('/users')
@@ -10,7 +11,6 @@ test('Deve listar todos os usuários', async () => {
 })
 
 test('Deve inserir usuário com sucesso', async () => {
-  const email = `${Date.now()}@gmail.com`
   const res = await request(app).post('/users').send({ name: 'Walter White', email, passwd: '123456' })
   expect(res.status).toBe(201)
   expect(res.body.name).toBe('Walter White')
@@ -34,4 +34,10 @@ test('Não deve inserir usuário sem senha', async (done) => {
   expect(result.status).toBe(400)
   expect(result.body.error).toBe('Senha é um atributo obrigatório')
   done()
+})
+
+test('Não deve inserir usuário com email já existente', async () => {
+  const res = await request(app).post('/users').send({ name: 'Walter White', email, passwd: '123456' })
+  expect(res.status).toBe(400)
+  expect(res.body.error).toBe('Já existe um usuário com esse email')
 })
