@@ -1,5 +1,6 @@
 module.exports = (app) => {
-    const save = (account) => {
+    const save = async (account) => {
+        if (!account.name) return { error: 'Nome é um atributo obrigatório' }
         return app.db('accounts').insert(account, '*')
     }
 
