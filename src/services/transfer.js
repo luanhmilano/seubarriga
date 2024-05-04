@@ -5,6 +5,12 @@ module.exports = (app) => {
         return app.db('transfers').where(filter).select()
     }
 
+    const findOne = (filter = {}) => {
+        return app.db('transfers')
+          .where(filter)
+          .first();
+    };
+
     const validate = async (transfer) => {
         if (!transfer.description) throw new ValidationError('Descrição é um atributo obrigatório');
         if (!transfer.ammount) throw new ValidationError('Valor é um atributo obrigatório');
@@ -19,7 +25,7 @@ module.exports = (app) => {
         });
     };
     
-    const save = async (transfer) => {
+    const save = async (transfer) => { 
         const result = await app.db('transfers').insert(transfer, '*');
         const transferId = result[0].id;
     
@@ -32,5 +38,25 @@ module.exports = (app) => {
         return result;
     };
 
-    return { find, validate, save }
+    const update = async (id, transfer) => {
+        const result = await app.db('transfers')
+          .where({ id })
+          .update(transfer, '*');
+    
+        const transactions = [
+          { description: `Transfer to acc #${transfer.acc_dest_id}`, date: transfer.date, ammount: transfer.ammount * -1, type: 'O', acc_id: transfer.acc_ori_id, transfer_id: id, status: true },
+          { description: `Transfer from acc #${transfer.acc_ori_id}`, date: transfer.date, ammount: transfer.ammount, type: 'I', acc_id: transfer.acc_dest_id, transfer_id: id, status: true },
+        ];
+    
+        await app.db('transactions').where({ transfer_id: id }).del();
+        await app.db('transactions').insert(transactions);
+        return result;
+    };
+
+    const remove = async (id) => {
+        await app.db('transactions').where({ transfer_id: id }).del();
+        return app.db('transfers').where({ id }).del();
+    };
+
+    return { find, findOne, validate, save, update, remove }
 }
