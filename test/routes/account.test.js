@@ -6,13 +6,13 @@ const MAIN_ROUTE = '/v1/accounts'
 let user
 let user2
 
-beforeEach(async () => {
-    const res = await app.services.user.save({ name: 'User Account', email: `${Date.now()}@gmail.com`, passwd: '123456' })
-    user = { ...res[0] }
-    user.token = jwt.encode(user, 'Segredo!')
-    const res2 = await app.services.user.save({ name: 'User Account #2', email: `${Date.now()}@gmail.com`, passwd: '123456' })
-    user2 = { ...res2[0] }
-})
+beforeAll(async () => {
+    const res = await app.services.user.save({ name: 'User Account', email: `${Date.now()}@email.com`, passwd: '123456' });
+    user = { ...res[0] };
+    user.token = jwt.encode(user, 'Segredo!');
+    const res2 = await app.services.user.save({ name: 'User Account #2', email: `${Date.now()}@email.com`, passwd: '123456' });
+    user2 = { ...res2[0] };
+  });
 
 test('Deve inserir uma nova conta com sucesso', () => {
     return request(app).post(MAIN_ROUTE).send({ name: 'Acc #1' })
@@ -42,17 +42,20 @@ test('Não deve inserir uma conta de nome duplicado, para o mesmo usuário', () 
     })
 })
 
-test('Deve listar apenas as contas do usuário', () => {
+test('Deve listar apenas as contas do usuário', async () => {
+    await app.db('transactions').del();
+    await app.db('accounts').del();
     return app.db('accounts').insert([
-        {name: 'Acc User #1', user_id: user.id},
-        {name: 'Acc User #2', user_id: user2.id}
-    ]).then(() => request(app).get(MAIN_ROUTE).set('authorization', `bearer ${user.token}`)
-    .then((res) => {
-        expect(res.status).toBe(200)
-        expect(res.body.length).toBe(1)
-        expect(res.body[0].name).toBe('Acc User #1')
-    }))
-})
+      { name: 'Acc User #1', user_id: user.id },
+      { name: 'Acc User #2', user_id: user2.id },
+    ]).then(() => request(app).get(MAIN_ROUTE)
+      .set('authorization', `bearer ${user.token}`)
+      .then((res) => {
+        expect(res.status).toBe(200);
+        expect(res.body.length).toBe(1);
+        expect(res.body[0].name).toBe('Acc User #1');
+      }));
+  });
 
 test('Deve retornar uma conta por Id', () => {
     return app.db('accounts').insert({ name: 'Acc By Id', user_id: user.id }, ['id']).then(acc => request(app).get(`${MAIN_ROUTE}/${acc[0].id}`).set('authorization', `bearer ${user.token}`))
