@@ -73,24 +73,28 @@ test('Transações de saída devem ser negativas', () => {
     })
 })
 
-test('Não deve inserir uma transação sem descrição', () => {
-    return request(app).post(MAIN_ROUTE).set('authorization', `bearer ${user.token}`).send({ date: new Date(), ammount: 100, type: 'I', acc_id: accUser.id}).then((res) => {
-        expect(res.status).toBe(400)
-        expect(res.body.error).toBe('Descrição é um atributo obrigatório')
-    })
-})
+describe('Ao tentar inserir uma transação inválida', () => {
+    // const validTransaction = 
 
-test('Não deve inserir uma transação sem valor', () => {
-    return request(app).post(MAIN_ROUTE).set('authorization', `bearer ${user.token}`).send({ description: 'Desc', date: new Date(), type: 'I', acc_id: accUser.id}).then((res) => {
-        expect(res.status).toBe(400)
-        expect(res.body.error).toBe('Valor é um atributo obrigatório')
+    let validTransaction
+    beforeAll(() => {
+        validTransaction = {description: 'New T', date: new Date(), ammount: 100, type: 'I', acc_id: accUser.id}
     })
-})
 
-test.skip('Não deve inserir uma transação sem data', () => {})
-test.skip('Não deve inserir uma transação sem conta', () => {})
-test.skip('Não deve inserir uma transação sem tipo', () => {})
-test.skip('Não deve inserir uma transação com tipo inválido', () => {})
+    const testTemplate = (newData, errorMessage) => {
+        return request(app).post(MAIN_ROUTE).set('authorization', `bearer ${user.token}`).send({ ...validTransaction, ...newData }).then((res) => {
+            expect(res.status).toBe(400)
+            expect(res.body.error).toBe(errorMessage)
+        })
+    }
+
+    test('Não deve inserir sem descrição', () => testTemplate({description: null}, 'Descrição é um atributo obrigatório'))
+    test('Não deve inserir sem valor', () => testTemplate({ammount: null}, 'Valor é um atributo obrigatório'))
+    test('Não deve inserir sem data', () => testTemplate({date: null}, 'Data é um atributo obrigatório'))
+    test('Não deve inserir sem conta', () => testTemplate({acc_id: null}, 'Conta é um atributo obrigatório'))
+    test('Não deve inseri sem tipo', () => testTemplate({type: null}, 'Tipo é um atributo obrigatório'))
+    test('Não deve inserir com tipo inválido', () => testTemplate({type: 'A'}, 'Tipo inválido'))
+})
 
 test('Deve retornar uma transação por ID', () => {
     return app.db('transactions').insert(
