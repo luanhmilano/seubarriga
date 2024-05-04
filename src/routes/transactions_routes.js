@@ -25,7 +25,11 @@ module.exports = (app) => {
         app.services.transaction.update(req.params.id, req.body)
           .then(result => res.status(200).json(result[0]))
           .catch(err => next(err));
-      });
+    });
+
+    router.delete('/:id', (req, res, next) => {
+        app.services.transaction.remove(req.params.id).then(() => res.status(204).send()).catch(err => next(err))
+    })
 
     return router
 }
