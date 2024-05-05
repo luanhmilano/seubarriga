@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1714868753789" clover="3.2.0">
+  <project timestamp="1714868753789" name="All files">
+    <metrics statements="298" coveredstatements="282" conditionals="70" coveredconditionals="65" methods="125" coveredmethods="108" elements="493" coveredelements="455" complexity="0" loc="298" ncloc="298" packages="7" files="20" classes="20">
+      <package name="seubarriga">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="knexfile.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\knexfile.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="app.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\app.js">
+          <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="10" count="7" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+          <line num="20" count="7" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="24" count="7" type="stmt"/>
+          <line num="25" count="34" type="stmt"/>
+          <line num="26" count="34" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="34" type="cond" truecount="2" falsecount="0"/>
+          <line num="28" count="29" type="stmt"/>
+          <line num="29" count="5" type="stmt"/>
+          <line num="38" count="7" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src.config">
+        <metrics statements="29" coveredstatements="27" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="6"/>
+        <file name="middlewares.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\config\middlewares.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+        </file>
+        <file name="passport.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\config\passport.js">
+          <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="4"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="6" count="7" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="9" count="7" type="stmt"/>
+          <line num="14" count="7" type="stmt"/>
+          <line num="15" count="72" type="stmt"/>
+          <line num="16" count="72" type="cond" truecount="1" falsecount="1"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="21" count="7" type="stmt"/>
+          <line num="23" count="7" type="stmt"/>
+          <line num="24" count="7" type="stmt"/>
+        </file>
+        <file name="router.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\config\router.js">
+          <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="9" count="7" type="stmt"/>
+          <line num="10" count="7" type="stmt"/>
+          <line num="11" count="7" type="stmt"/>
+          <line num="13" count="7" type="stmt"/>
+          <line num="15" count="7" type="stmt"/>
+          <line num="16" count="7" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src.errors">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <file name="RecursoIndevidoError.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\errors\RecursoIndevidoError.js">
+          <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="7" type="cond" truecount="1" falsecount="0"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+        </file>
+        <file name="ValidationError.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\errors\ValidationError.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="29" type="stmt"/>
+          <line num="3" count="29" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src.routes">
+        <metrics statements="134" coveredstatements="120" conditionals="10" coveredconditionals="10" methods="74" coveredmethods="59"/>
+        <file name="accounts_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\accounts_routes.js">
+          <metrics statements="30" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="19" coveredmethods="16"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="9" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="10" count="4" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="14" count="7" type="stmt"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="20" count="7" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="26" count="7" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="7" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="7" type="stmt"/>
+          <line num="39" count="2" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="44" count="7" type="stmt"/>
+        </file>
+        <file name="auth_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\auth_routes.js">
+          <metrics statements="22" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="10" count="7" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="25" count="7" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="34" count="7" type="stmt"/>
+        </file>
+        <file name="balance_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\balance_routes.js">
+          <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="6" count="7" type="stmt"/>
+          <line num="7" count="10" type="stmt"/>
+          <line num="8" count="10" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+        </file>
+        <file name="transactions_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\transactions_routes.js">
+          <metrics statements="28" coveredstatements="24" conditionals="2" coveredconditionals="2" methods="19" coveredmethods="14"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+          <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="14" count="7" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="7" type="stmt"/>
+          <line num="21" count="17" type="stmt"/>
+          <line num="22" count="11" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="26" count="7" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="7" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="7" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="42" count="7" type="stmt"/>
+        </file>
+        <file name="transfers_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\transfers_routes.js">
+          <metrics statements="33" coveredstatements="29" conditionals="2" coveredconditionals="2" methods="22" coveredmethods="17"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
+          <line num="8" count="11" type="stmt"/>
+          <line num="10" count="11" type="cond" truecount="2" falsecount="0"/>
+          <line num="11" count="10" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="15" count="7" type="stmt"/>
+          <line num="16" count="18" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="18" count="14" type="stmt"/>
+          <line num="21" count="7" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="25" count="7" type="stmt"/>
+          <line num="26" count="3" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="7" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="7" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="7" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="50" count="7" type="stmt"/>
+        </file>
+        <file name="users_routes.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\routes\users_routes.js">
+          <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="6" count="7" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+          <line num="13" count="6" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="21" count="7" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src.seeds">
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12"/>
+        <file name="01_transfer.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\seeds\01_transfer.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+        </file>
+        <file name="02_balance.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\seeds\02_balance.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="seubarriga.src.services">
+        <metrics statements="96" coveredstatements="96" conditionals="53" coveredconditionals="49" methods="27" coveredmethods="27"/>
+        <file name="account.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\services\account.js">
+          <metrics statements="18" coveredstatements="18" conditionals="7" coveredconditionals="6" methods="6" coveredmethods="6"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="7" type="cond" truecount="0" falsecount="1"/>
+          <line num="9" count="10" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+          <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="21" count="7" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="25" count="7" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="32" count="7" type="stmt"/>
+        </file>
+        <file name="balance.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\services\balance.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="3" count="10" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+        </file>
+        <file name="transaction.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\services\transaction.js">
+          <metrics statements="22" coveredstatements="22" conditionals="21" coveredconditionals="21" methods="6" coveredmethods="6"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="cond" truecount="1" falsecount="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="12" count="7" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="18" count="7" type="stmt"/>
+          <line num="19" count="17" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="16" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="15" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="23" count="13" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="12" type="cond" truecount="4" falsecount="0"/>
+          <line num="26" count="11" type="stmt"/>
+          <line num="27" count="11" type="cond" truecount="6" falsecount="0"/>
+          <line num="28" count="6" type="stmt"/>
+          <line num="31" count="11" type="stmt"/>
+          <line num="34" count="7" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="40" count="7" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="44" count="7" type="stmt"/>
+        </file>
+        <file name="transfer.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\services\transfer.js">
+          <metrics statements="32" coveredstatements="32" conditionals="16" coveredconditionals="14" methods="8" coveredmethods="8"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="cond" truecount="0" falsecount="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="7" type="cond" truecount="0" falsecount="1"/>
+          <line num="9" count="12" type="stmt"/>
+          <line num="14" count="7" type="stmt"/>
+          <line num="15" count="18" type="cond" truecount="2" falsecount="0"/>
+          <line num="16" count="16" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="12" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="10" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="6" type="stmt"/>
+          <line num="23" count="6" type="stmt"/>
+          <line num="24" count="12" type="cond" truecount="2" falsecount="0"/>
+          <line num="28" count="7" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="30" count="3" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="41" count="7" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="56" count="7" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="61" count="7" type="stmt"/>
+        </file>
+        <file name="user.js" path="C:\Compass\Sprint-4\Semana-8\seubarriga\src\services\user.js">
+          <metrics statements="20" coveredstatements="20" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="5"/>
+          <line num="1" count="7" type="stmt"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="7" type="cond" truecount="0" falsecount="1"/>
+          <line num="10" count="85" type="stmt"/>
+          <line num="13" count="7" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+          <line num="15" count="8" type="stmt"/>
+          <line num="18" count="7" type="stmt"/>
+          <line num="19" count="12" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="11" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="10" type="cond" truecount="2" falsecount="0"/>
+          <line num="23" count="9" type="stmt"/>
+          <line num="24" count="9" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="8" type="stmt"/>
+          <line num="27" count="8" type="stmt"/>
+          <line num="28" count="8" type="stmt"/>
+          <line num="31" count="7" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
